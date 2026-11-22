@@ -26,6 +26,15 @@ Two independent AI reviewers were asked to attack the statements (fidelity to th
 vacuity, hygiene, the certificate checker and its coverage, the documentation). Neither found a
 problem with any theorem; their wording corrections are applied.
 
+## Module-system port (2026-11-22 20:04 UTC)
+
+For registration in the Palomar registry every Lean file was converted to the module system
+(`module`, `public import`, `@[expose] public section`; no statement or proof changed), the
+certificate modules were regenerated in that form, and `comparator.json` was reduced to the keys
+Palomar accepts. The full build and axiom audit were rerun (`build-full-2026-11-22T2004Z.log`,
+`axioms-2026-11-22T2004Z.txt`, `sha256-2026-11-22T2004Z.txt`); the comparator results above are for
+the sources before the port, and the GitHub Actions run on the ported commit repeats them.
+
 ## Caveats
 
 - **The local comparator runs were not sandboxed.** macOS has no bubblewrap, so `lake comparator` ran

@@ -1,11 +1,16 @@
-/-
+module
+
+public import GRHCorollaries.Mills.Defs
+
+/-!
 # A least Mills number exists as soon as one exists
 
 The set of Mills numbers `> 1` is bounded below by `5/4` (because `⌊x ^ 3⌋₊` is a prime, so
 `x ^ 3 ≥ 2`), and it is closed under taking the infimum: for each `n` the floor
 `⌊x ^ 3 ^ n⌋₊` is locally constant to the right of the infimum.
 -/
-import GRHCorollaries.Mills.Defs
+
+@[expose] public section
 
 namespace Mills
 

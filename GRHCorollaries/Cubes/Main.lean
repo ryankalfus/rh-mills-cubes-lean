@@ -1,4 +1,9 @@
-/-
+module
+
+public import GRHCorollaries.Cubes.Finite
+public import GRHCorollaries.PrimeBetweenCubes
+
+/-!
 # A prime between consecutive cubes, assuming the Riemann Hypothesis
 
 `GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH`: assuming Mathlib's
@@ -12,8 +17,8 @@ Known since Caldwell–Cheng (J. Integer Seq. 8 (2005), Article 05.4.1, Lemma 5)
 Without RH it is known for `n ^ 3 ≤ 1.649·10⁴⁰` by computation (arXiv:2601.15564) and for
 `n ≥ exp (exp 32.537)` (Dudek's method, constant of Cully-Hugill), and open in between.
 -/
-import GRHCorollaries.Cubes.Finite
-import GRHCorollaries.PrimeBetweenCubes
+
+@[expose] public section
 
 namespace GRHCorollaries
 

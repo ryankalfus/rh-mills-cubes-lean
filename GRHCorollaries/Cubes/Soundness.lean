@@ -1,4 +1,13 @@
-/-
+module
+
+public import GRHCorollaries.Cubes.Defs
+public import Mathlib.Data.Nat.ModEq
+public import Mathlib.Data.Nat.Prime.Defs
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.FieldTheory.Finite.Basic
+public import Mathlib.GroupTheory.OrderOfElement
+
+/-!
 # Certificates for a prime between consecutive cubes: soundness of the checker
 
 The checker of `GRHCorollaries/Cubes/Defs.lean` is sound:
@@ -10,12 +19,8 @@ The checker of `GRHCorollaries/Cubes/Defs.lean` is sound:
 * `exists_prime_of_blockOK`: an accepted block of `cnt` certificates starting at `N₀` gives such a
   prime for every `N` with `N₀ ≤ N < N₀ + cnt`.
 -/
-import GRHCorollaries.Cubes.Defs
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Prime.Defs
-import Mathlib.Data.ZMod.Basic
-import Mathlib.FieldTheory.Finite.Basic
-import Mathlib.GroupTheory.OrderOfElement
+
+@[expose] public section
 
 namespace GRHCorollaries.Cubes
 

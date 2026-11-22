@@ -1,4 +1,8 @@
-/-
+module
+
+
+
+/-!
 # Certificates for a prime between consecutive cubes: the checker
 
 Executable definitions only (no theorems), so that certificate files can import this module
@@ -11,6 +15,8 @@ A certificate for `N` is one natural number
 `a` is a witness for Pocklington's criterion: `a^(p-1) ≡ 1`, and `a^((p-1)/2) - 1`,
 `a^((p-1)/3) - 1` are coprime to `p`.
 -/
+
+@[expose] public section
 
 namespace GRHCorollaries.Cubes
 

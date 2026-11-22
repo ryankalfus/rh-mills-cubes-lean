@@ -1,4 +1,12 @@
-/-
+module
+
+public import Cryptids.Semantics.Riemann.ExplicitLarge
+public import Cryptids.Semantics.Riemann.HorizontalBounds
+public import Cryptids.Semantics.Riemann.VonMangoldtCount
+public import Cryptids.Semantics.Riemann.DigammaBinet
+public import Cryptids.Semantics.Riemann.WeightedStieltjes
+
+/-!
 # RH implies an explicit bound for Chebyshev's ψ
 
 `|ψ(x) - x| ≤ (7/8) √x (log x)²` for all real `x ≥ 5000`, assuming Mathlib's `RiemannHypothesis`.
@@ -12,11 +20,8 @@ see `vendor-cryptids/NOTICE.md`. The proof below is the body of upstream's
 (`Cryptids/Semantics/Riemann/Analytic.lean`), repeated here so that the register-machine
 half of that file does not have to be imported. Nothing in it is ours.
 -/
-import Cryptids.Semantics.Riemann.ExplicitLarge
-import Cryptids.Semantics.Riemann.HorizontalBounds
-import Cryptids.Semantics.Riemann.VonMangoldtCount
-import Cryptids.Semantics.Riemann.DigammaBinet
-import Cryptids.Semantics.Riemann.WeightedStieltjes
+
+@[expose] public section
 
 namespace GRHCorollaries
 

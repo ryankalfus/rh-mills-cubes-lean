@@ -1,4 +1,11 @@
-/-
+module
+
+public import GRHCorollaries.Mills.LowerBound
+public import GRHCorollaries.Mills.Construction
+public import GRHCorollaries.Mills.Least
+public import GRHCorollaries.PrimeBetweenCubes
+
+/-!
 # Mills' constant under the Riemann Hypothesis
 
 Main results (statements as in `google-deepmind/formal-conjectures`, `Wikipedia/Mills.lean`):
@@ -12,10 +19,8 @@ Main results (statements as in `google-deepmind/formal-conjectures`, `Wikipedia/
 RH enters only through `GRHCorollaries.exists_prime_between_cubes_of_RH`, which supplies the
 primes `c₄, c₅, …` of the cube chain `2, 11, 1361, 2521008887, c₄, …`.
 -/
-import GRHCorollaries.Mills.LowerBound
-import GRHCorollaries.Mills.Construction
-import GRHCorollaries.Mills.Least
-import GRHCorollaries.PrimeBetweenCubes
+
+@[expose] public section
 
 namespace Mills
 

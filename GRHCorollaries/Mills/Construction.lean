@@ -1,4 +1,9 @@
-/-
+module
+
+public import GRHCorollaries.Mills.Defs
+public import Mathlib.Topology.Compactness.Compact
+
+/-!
 # Mills' construction
 
 A *cube chain* is a sequence of primes `c 0, c 1, …` with `c k ^ 3 ≤ c (k+1)` and
@@ -6,8 +11,8 @@ A *cube chain* is a sequence of primes `c 0, c 1, …` with `c k ^ 3 ≤ c (k+1)
 `A > 1`, in the sense that `⌊A ^ 3 ^ (k+1)⌋₊ = c k` for all `k`.  The number `A` is a point of the
 intersection of the nested compact sets `{x ≥ 0 | c k ≤ x ^ 3 ^ (k+1) ≤ c k + 1}`.
 -/
-import GRHCorollaries.Mills.Defs
-import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 namespace Mills
 

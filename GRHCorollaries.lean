@@ -1,4 +1,11 @@
-/-
+module
+
+public import GRHCorollaries.PsiBound
+public import GRHCorollaries.PrimeBetweenCubes
+public import GRHCorollaries.Mills.Main
+public import GRHCorollaries.Cubes.Main
+
+/-!
 Root of the `GRHCorollaries` library: machine-checked consequences of the Riemann Hypothesis,
 with RH as an explicit hypothesis (Mathlib's `RiemannHypothesis`).
 
@@ -6,7 +13,7 @@ with RH as an explicit hypothesis (Mathlib's `RiemannHypothesis`).
 * `GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH` — a prime between `n³` and `(n+1)³`, every `n ≥ 1`
 * `Mills.lower_bound_of_RH`, `Mills.exists_isMinMills_of_RH`, `Mills.exists_isMills_of_RH`
 -/
-import GRHCorollaries.PsiBound
-import GRHCorollaries.PrimeBetweenCubes
-import GRHCorollaries.Mills.Main
-import GRHCorollaries.Cubes.Main
+
+@[expose] public section
+
+

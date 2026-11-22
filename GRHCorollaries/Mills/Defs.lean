@@ -1,11 +1,16 @@
-/-
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+/-!
 # Mills numbers: definitions
 
 `IsMills` and `IsMinMills` are copied character for character from
 `google-deepmind/formal-conjectures`, `FormalConjectures/Wikipedia/Mills.lean`
 (commit 2207c54, Apache-2.0, Copyright 2026 The Formal Conjectures Authors).
 -/
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 namespace Mills
 

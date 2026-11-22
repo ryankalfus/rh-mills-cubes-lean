@@ -1,0 +1,80 @@
+Sun Nov 22 20:04:50 UTC 2026
+✔ [2/5] Built GRHCorollaries.Cubes.Defs (1.6s)
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S00 (38s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S01 (38s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S02 (38s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S03 (34s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S04 (34s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S05 (34s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S06 (34s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S07 (34s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S08 (34s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S09 (40s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S10 (40s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S11 (39s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S12 (35s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S13 (35s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S14 (35s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S15 (40s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S16 (40s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S17 (40s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S18 (43s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S19 (43s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S20 (43s)
+Build completed successfully (5 jobs).
+✔ [3/5] Built GRHCorollaries.Cubes.Certs.S21 (36s)
+✔ [4/5] Built GRHCorollaries.Cubes.Certs.S23 (35s)
+✔ [5/5] Built GRHCorollaries.Cubes.Certs.S22 (36s)
+Build completed successfully (5 jobs).
+✔ [3986/4000] Built GRHCorollaries.Mills.Defs (11s)
+⚠ [3987/4000] Built Challenge (11s)
+warning: Challenge.lean:45:8: declaration uses `sorry`
+warning: Challenge.lean:50:8: declaration uses `sorry`
+warning: Challenge.lean:55:8: declaration uses `sorry`
+warning: Challenge.lean:64:8: declaration uses `sorry`
+warning: Challenge.lean:70:8: declaration uses `sorry`
+✔ [3989/4000] Built GRHCorollaries.PsiBound (11s)
+✔ [3990/4000] Built GRHCorollaries.Cubes.Soundness (11s)
+✔ [3991/4000] Built GRHCorollaries.Mills.Construction (8.2s)
+✔ [3992/4000] Built GRHCorollaries.Mills.Least (8.5s)
+✔ [3993/4000] Built GRHCorollaries.Cubes.Finite (9.7s)
+✔ [3994/4000] Built GRHCorollaries.Mills.LowerBound (14s)
+✔ [3995/4000] Built GRHCorollaries.PrimeBetweenCubes (20s)
+✔ [3996/4000] Built GRHCorollaries.Cubes.Main (6.5s)
+✔ [3997/4000] Built GRHCorollaries.Mills.Main (6.7s)
+✔ [3998/4000] Built GRHCorollaries (7.0s)
+ℹ [3999/4000] Built GRHCorollaries.Audit (7.0s)
+info: GRHCorollaries/Audit.lean:13:0: 'Mills.lower_bound_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:14:0: 'Mills.exists_isMinMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:15:0: 'Mills.exists_isMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:16:0: 'GRHCorollaries.exists_prime_between_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:17:0: 'GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:18:0: 'GRHCorollaries.Cubes.exists_prime_between_cubes_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:19:0: 'GRHCorollaries.abs_psi_sub_self_le_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (4000 jobs).
+      410.87 real      1062.74 user        80.96 sys
+          1467760640  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             5491924  page reclaims
+              749468  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  10  signals received
+              183692  voluntary context switches
+             3979248  involuntary context switches
+            51139745  instructions retired
+            40214298  cycles elapsed
+             1376568  peak memory footprint
+build exit code: 0
+Sun Nov 22 20:11:41 UTC 2026

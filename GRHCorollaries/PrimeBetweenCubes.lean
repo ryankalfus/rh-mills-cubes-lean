@@ -1,4 +1,9 @@
-/-
+module
+
+public import GRHCorollaries.PsiBound
+public import Mathlib.NumberTheory.PrimeCounting
+
+/-!
 # RH implies a prime strictly between consecutive cubes (large range)
 
 For every natural `N ≥ 1200001`, Mathlib's `RiemannHypothesis` gives a prime `p` with
@@ -16,8 +21,8 @@ side is at least `m (√m - 3) - 1 > 0`. Hence `θ y > θ x`, and the two sums o
 
 This is the only place where the Mills and cube results use RH.
 -/
-import GRHCorollaries.PsiBound
-import Mathlib.NumberTheory.PrimeCounting
+
+@[expose] public section
 
 namespace GRHCorollaries
 

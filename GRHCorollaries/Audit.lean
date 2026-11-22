@@ -1,9 +1,14 @@
-/-
+module
+
+public import GRHCorollaries.Mills.Main
+public import GRHCorollaries.Cubes.Main
+
+/-!
 Axiom audit of the headline theorems. Run `scripts/axioms.sh`; every line must list only
 `propext`, `Classical.choice`, `Quot.sound`.
 -/
-import GRHCorollaries.Mills.Main
-import GRHCorollaries.Cubes.Main
+
+@[expose] public section
 
 #print axioms Mills.lower_bound_of_RH
 #print axioms Mills.exists_isMinMills_of_RH

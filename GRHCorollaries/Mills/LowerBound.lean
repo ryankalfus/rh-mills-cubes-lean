@@ -1,4 +1,10 @@
-/-
+module
+
+public import GRHCorollaries.Mills.Defs
+public import Mathlib.NumberTheory.LucasPrimality
+public import Mathlib.Tactic
+
+/-!
 # Mills numbers: the unconditional lower bound
 
 Every Mills number `A` (that is, `IsMills A` with `1 < A`) satisfies `1.3063778838 < A`.
@@ -8,9 +14,8 @@ Put `q n = ⌊A ^ 3 ^ n⌋₊`. Flooring a cube gives `q n ^ 3 ≤ q (n + 1) < (
 prime at or above the cube of the previous bound. Hence
 `A ^ 81 ≥ 2521008887 > 1.3063778838 ^ 81`.
 -/
-import GRHCorollaries.Mills.Defs
-import Mathlib.NumberTheory.LucasPrimality
-import Mathlib.Tactic
+
+@[expose] public section
 
 namespace Mills
 

@@ -1,5 +1,7 @@
-import Mathlib.NumberTheory.LSeries.RiemannZeta
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
+module
+
+public import Mathlib.NumberTheory.LSeries.RiemannZeta
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
 
 /-!
 # Challenge: Mills' constant and primes between cubes, assuming the Riemann Hypothesis
@@ -21,6 +23,8 @@ In words: a real `A` is a *Mills number* if `⌊A ^ (3 ^ n)⌋` is prime for eve
 Assuming RH, the least Mills number greater than 1 exists and lies strictly between
 1.3063778838 and 1.3063778839 (Caldwell–Cheng, J. Integer Seq. 8 (2005), Article 05.4.1).
 -/
+
+@[expose] public section
 
 namespace Mills
 
