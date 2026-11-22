@@ -1,8 +1,9 @@
 # Verification record
 
-Everything below was run on one machine (Apple M3 MacBook, 8 GB RAM, macOS) with Lean v4.35.0
-(commit `eb6cafb7`) and Mathlib v4.35.0, on 2026-11-22. Raw logs are in `logs/verify/`; times
-in file names are UTC. Nothing has yet been rebuilt by a second party or on a second machine.
+Unless marked otherwise, everything below was run on one machine (Apple M3 MacBook, 8 GB RAM,
+macOS) with Lean v4.35.0 (commit `eb6cafb7`) and Mathlib v4.35.0, on 2026-11-22. Raw logs are in
+`logs/verify/`; times in file names are UTC. The GitHub Actions row is a second machine; no
+third party has rebuilt it yet.
 
 ## Results
 
@@ -19,6 +20,7 @@ in file names are UTC. Nothing has yet been rebuilt by a second party or on a se
 | All 1,200,000 certificates decoded from the Lean files and re-checked by separate Python code; ranges tile [1, 1200001) | 0 bad | `check-certs-*.txt` |
 | Generators reproduce `GRHCorollaries/Cubes/Certs/` and `Cubes/Finite.lean` byte for byte | yes (checked by an independent reviewer) | — |
 | Source hashes | recorded | `sha256-*.txt` |
+| **GitHub Actions, ubuntu-24.04, fresh clone** (run 45059569955, commit `2a3f476`): build, axiom audit (7 theorems), certificate re-check, and **`lake comparator` inside its bubblewrap sandbox** | all passed; comparator: nanoda and the Lean kernel accept, "Your solution is okay!" (20:01 UTC) | https://github.com/ryankalfus/rh-mills-cubes-lean/actions/runs/45059569955 |
 
 Two independent AI reviewers were asked to attack the statements (fidelity to the sources,
 vacuity, hygiene, the certificate checker and its coverage, the documentation). Neither found a
@@ -26,13 +28,13 @@ problem with any theorem; their wording corrections are applied.
 
 ## Caveats
 
-- **The comparator runs were not sandboxed.** macOS has no bubblewrap, so `lake comparator` ran
+- **The local comparator runs were not sandboxed.** macOS has no bubblewrap, so `lake comparator` ran
   with `--inadvisably-no-sandbox`, and the tool itself prints "Sandbox disabled, this run is not
   trustworthy". The runs show that this build proves exactly the statements of `Challenge.lean`
   and that the listed kernels accept the export; they are not the sandboxed judgment a third
-  party should run. The GitHub Actions workflow `.github/workflows/verify.yml` repeats the build
-  from a fresh clone on Linux and runs `lake comparator` inside its sandbox; see the repository's
-  Actions tab for its result.
+  party should run. The sandboxed run is the GitHub Actions one above (`.github/workflows/verify.yml`),
+  with the Lean kernel and nanoda; the other external kernels ran only in the unsandboxed local
+  `--paranoid` run, and only on the Mills theorems.
 - **Mathlib version.** The proof is compiled against Mathlib v4.35.0. formal-conjectures pins
   Mathlib v4.33.1, and the Lean proof of RH announced on 2026-11-20 is also on v4.33.1. The
   statements have not been compiled inside formal-conjectures, and RH has not been discharged.
