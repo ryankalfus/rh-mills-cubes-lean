@@ -30,7 +30,9 @@ problem with any theorem; their wording corrections are applied.
   with `--inadvisably-no-sandbox`, and the tool itself prints "Sandbox disabled, this run is not
   trustworthy". The runs show that this build proves exactly the statements of `Challenge.lean`
   and that the listed kernels accept the export; they are not the sandboxed judgment a third
-  party should run. To do that on Linux: `lake comparator` (with bubblewrap installed).
+  party should run. The GitHub Actions workflow `.github/workflows/verify.yml` repeats the build
+  from a fresh clone on Linux and runs `lake comparator` inside its sandbox; see the repository's
+  Actions tab for its result.
 - **Mathlib version.** The proof is compiled against Mathlib v4.35.0. formal-conjectures pins
   Mathlib v4.33.1, and the Lean proof of RH announced on 2026-11-20 is also on v4.33.1. The
   statements have not been compiled inside formal-conjectures, and RH has not been discharged.

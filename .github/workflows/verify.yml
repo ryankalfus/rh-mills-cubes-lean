@@ -1,0 +1,50 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch Mathlib cache
+        run: lake exe cache get
+
+      - name: Build (fresh clone, every module including the 24 certificate modules)
+        run: lake build GRHCorollaries Challenge 2>&1 | tee build.log
+
+      - name: Axiom audit
+        run: |
+          grep "depends on axioms" build.log
+          if grep "depends on axioms" build.log | grep -v "\[propext, Classical.choice, Quot.sound\]"; then
+            echo "unexpected axiom"; exit 1
+          fi
+          test "$(grep -c 'depends on axioms' build.log)" -eq 7
+
+      - name: Independent certificate re-check (Python, untrusted, sanity only)
+        run: python3 scripts/check_certs.py
+
+      - name: Allow bubblewrap sandbox
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq bubblewrap
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
+
+      - name: Sandboxed lake comparator (Lean kernel + nanoda)
+        run: lake comparator
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-log
+          path: build.log
