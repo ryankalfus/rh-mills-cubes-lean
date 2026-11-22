@@ -1,0 +1,55 @@
+Sun Nov 22 18:56:41 UTC 2026
+⚠ [3789/3907] Replayed GRHCorollaries.PrimeBetweenCubes
+warning: GRHCorollaries/PrimeBetweenCubes.lean: imports `Mathlib.NumberTheory.PrimeCounting` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3790/3907] Replayed GRHCorollaries.Mills.Defs
+warning: GRHCorollaries/Mills/Defs.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3964/4000] Replayed GRHCorollaries.Mills.LowerBound
+warning: GRHCorollaries/Mills/LowerBound.lean: imports `Mathlib.NumberTheory.LucasPrimality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Mills/LowerBound.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3965/4000] Replayed GRHCorollaries.Mills.Construction
+warning: GRHCorollaries/Mills/Construction.lean: imports `Mathlib.Topology.Compactness.Compact` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3969/4000] Replayed GRHCorollaries.Cubes.Soundness
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.Nat.ModEq` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.Nat.Prime.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [3995/4000] Built GRHCorollaries.Cubes.Main (47s)
+⚠ [3996/4000] Built Challenge (47s)
+warning: Challenge.lean: imports `Mathlib.NumberTheory.LSeries.RiemannZeta` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Challenge.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Challenge.lean:41:8: declaration uses `sorry`
+warning: Challenge.lean:46:8: declaration uses `sorry`
+warning: Challenge.lean:51:8: declaration uses `sorry`
+warning: Challenge.lean:60:8: declaration uses `sorry`
+warning: Challenge.lean:66:8: declaration uses `sorry`
+✔ [3998/4000] Built GRHCorollaries (50s)
+ℹ [3999/4000] Built GRHCorollaries.Audit (50s)
+info: GRHCorollaries/Audit.lean:8:0: 'Mills.lower_bound_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:9:0: 'Mills.exists_isMinMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:10:0: 'Mills.exists_isMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:11:0: 'GRHCorollaries.exists_prime_between_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:12:0: 'GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:13:0: 'GRHCorollaries.Cubes.exists_prime_between_cubes_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:14:0: 'GRHCorollaries.abs_psi_sub_self_le_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (4000 jobs).
+      104.54 real         6.09 user        27.08 sys
+          1635827712  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1600842  page reclaims
+              917812  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               89174  voluntary context switches
+             1633680  involuntary context switches
+         38923740470  instructions retired
+         15105080514  cycles elapsed
+           222570208  peak memory footprint
+build exit code: 0
+Sun Nov 22 18:58:25 UTC 2026

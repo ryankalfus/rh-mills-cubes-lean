@@ -1,0 +1,14 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "GRHCorollaries",
+  "theorem_names": [
+    "Mills.lower_bound_of_RH",
+    "Mills.exists_isMinMills_of_RH",
+    "Mills.exists_isMills_of_RH",
+    "GRHCorollaries.exists_prime_between_cubes_of_RH",
+    "GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "external_kernels": {"nanoda": ["nanoda_bin"]}
+}

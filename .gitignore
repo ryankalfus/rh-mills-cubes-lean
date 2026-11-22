@@ -1,0 +1,22 @@
+# build products and local clones
+.lake/
+external/
+vendor/
+.DS_Store
+
+# working notes of the sessions that produced this repository (not part of the result)
+STATE.md
+PLAN.md
+LEDGER.md
+refs/
+
+# logs: only the verification record is kept
+logs/*
+!logs/verify/
+
+# scratch
+data/cube-certs-test.txt
+scripts/threshold.py
+scripts/cone.py
+scripts/mathlib_modules.txt
+data/

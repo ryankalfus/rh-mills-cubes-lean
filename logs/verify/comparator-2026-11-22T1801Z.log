@@ -1,0 +1,82 @@
+# lake comparator --inadvisably-no-sandbox 
+# started Sun Nov 22 18:01:52 UTC 2026; Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+# comparator.json:
+{
+  "challenge_module": "Challenge",
+  "solution_module": "GRHCorollaries",
+  "theorem_names": [
+    "Mills.lower_bound_of_RH",
+    "Mills.exists_isMinMills_of_RH",
+    "Mills.exists_isMills_of_RH",
+    "GRHCorollaries.exists_prime_between_cubes_of_RH",
+    "GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "external_kernels": {"nanoda": ["nanoda_bin"]}
+}
+WARNING: Sandbox disabled, this run is not trustworthy.
+Resolving dependencies
+Building Challenge
+⚠ [3250/3251] Replayed Challenge
+warning: Challenge.lean: imports `Mathlib.NumberTheory.LSeries.RiemannZeta` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Challenge.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: Challenge.lean:39:8: declaration uses `sorry`
+warning: Challenge.lean:44:8: declaration uses `sorry`
+warning: Challenge.lean:49:8: declaration uses `sorry`
+warning: Challenge.lean:58:8: declaration uses `sorry`
+warning: Challenge.lean:64:8: declaration uses `sorry`
+Build completed successfully (3251 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Mills.lower_bound_of_RH, Mills.exists_isMinMills_of_RH, Mills.exists_isMills_of_RH, GRHCorollaries.exists_prime_between_cubes_of_RH, GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building GRHCorollaries
+⚠ [3790/3998] Replayed GRHCorollaries.PrimeBetweenCubes
+warning: GRHCorollaries/PrimeBetweenCubes.lean: imports `Mathlib.NumberTheory.PrimeCounting` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3791/3998] Replayed GRHCorollaries.Mills.Defs
+warning: GRHCorollaries/Mills/Defs.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3964/3998] Replayed GRHCorollaries.Mills.LowerBound
+warning: GRHCorollaries/Mills/LowerBound.lean: imports `Mathlib.NumberTheory.LucasPrimality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Mills/LowerBound.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3965/3998] Replayed GRHCorollaries.Mills.Construction
+warning: GRHCorollaries/Mills/Construction.lean: imports `Mathlib.Topology.Compactness.Compact` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3969/3998] Replayed GRHCorollaries.Cubes.Soundness
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.Nat.ModEq` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.Nat.Prime.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: GRHCorollaries/Cubes/Soundness.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+ℹ [3996/3998] Replayed GRHCorollaries.Audit
+info: GRHCorollaries/Audit.lean:8:0: 'Mills.lower_bound_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:9:0: 'Mills.exists_isMinMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:10:0: 'Mills.exists_isMills_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:11:0: 'GRHCorollaries.exists_prime_between_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:12:0: 'GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:13:0: 'GRHCorollaries.Cubes.exists_prime_between_cubes_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: GRHCorollaries/Audit.lean:14:0: 'GRHCorollaries.abs_psi_sub_self_le_of_RH' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3998 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Mills.lower_bound_of_RH, Mills.exists_isMinMills_of_RH, Mills.exists_isMills_of_RH, GRHCorollaries.exists_prime_between_cubes_of_RH, GRHCorollaries.exists_prime_between_consecutive_cubes_of_RH, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from GRHCorollaries
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+     3264.90 real      3085.08 user       383.71 sys
+          1859207168  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+            38966431  page reclaims
+             5529708  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              302348  voluntary context switches
+            13497055  involuntary context switches
+            15325665  instructions retired
+             8296949  cycles elapsed
+              835776  peak memory footprint
+comparator exit code: 0
+# finished Sun Nov 22 18:56:17 UTC 2026
+/dev/disk3s5   228Gi   165Gi    31Gi    85%    1.8M  322M    1%   /System/Volumes/Data

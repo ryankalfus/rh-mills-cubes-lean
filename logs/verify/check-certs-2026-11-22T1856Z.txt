@@ -1,0 +1,1 @@
+1200 block theorems; 1200 range lemmas tile [1, 1200001); 1200000 certificates decoded and checked; bad: 0; 87 s

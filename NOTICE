@@ -1,0 +1,22 @@
+Two consequences of the Riemann Hypothesis, machine-checked in Lean 4
+Copyright 2026 the authors of this repository (github.com/ryankalfus)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository contains material from other projects:
+
+1. vendor-cryptids/Cryptids/Semantics/Riemann/*.lean
+   Six files copied without modification from google-deepmind/cryptids,
+   commit 3647718b5df22e1a61462dec0376bd204526285a.
+   Copyright (c) 2026 Google LLC. Apache License 2.0 (vendor-cryptids/LICENSE-cryptids).
+   The proof in GRHCorollaries/PsiBound.lean repeats 25 lines of
+   Cryptids/Semantics/Riemann/Analytic.lean from the same commit.
+
+2. Challenge.lean, GRHCorollaries/Mills/Defs.lean, GRHCorollaries/Mills/Main.lean
+   The definitions `Mills.IsMills` and `Mills.IsMinMills`, the statement of
+   `Mills.lower_bound_of_RH` and their docstrings are copied from
+   google-deepmind/formal-conjectures, FormalConjectures/Wikipedia/Mills.lean,
+   commit 2207c54. Copyright 2026 The Formal Conjectures Authors. Apache License 2.0.
+
+The Lean proofs under GRHCorollaries/ other than the material listed above were written by
+Claude (Anthropic) in Claude Code sessions.

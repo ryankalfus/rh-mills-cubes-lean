@@ -1,0 +1,32 @@
+name = "GRHCorollaries"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["GRHCorollaries"]
+
+# Elaboration options shared with the vendored library (its upstream lakefile sets these).
+# Its `weak.linter.mathlibStandardSet` is a style linter only and is left off here.
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+# Vendored, unmodified subset of google-deepmind/cryptids (Apache-2.0): the six analytic modules behind
+# the explicit bound |psi(x) - x| <= (7/8) sqrt(x) (log x)^2 under RH. See vendor-cryptids/NOTICE.md.
+[[lean_lib]]
+name = "Cryptids"
+srcDir = "vendor-cryptids"
+globs = ["Cryptids.+"]
+
+# Our proofs.
+[[lean_lib]]
+name = "GRHCorollaries"
+globs = ["GRHCorollaries", "GRHCorollaries.+"]
+
+# Trusted statement file: Mathlib-only, theorems stated with `sorry`.
+[[lean_lib]]
+name = "Challenge"
