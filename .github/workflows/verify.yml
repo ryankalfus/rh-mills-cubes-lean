@@ -41,7 +41,9 @@ jobs:
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0 || true
 
       - name: Sandboxed lake comparator (Lean kernel + nanoda)
-        run: lake comparator
+        run: |
+          export PATH="$(lean --print-prefix)/bin:$PATH"   # bundled nanoda_bin, leanexport
+          lake comparator
 
       - uses: actions/upload-artifact@v4
         if: always()
