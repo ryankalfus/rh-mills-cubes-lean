@@ -21,3 +21,4 @@ scripts/cone.py
 scripts/mathlib_modules.txt
 data/
 scripts/port_module.py
+.palomar-submission.json
